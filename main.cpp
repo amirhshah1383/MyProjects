@@ -2,23 +2,29 @@
 
 using namespace std;
 
- main() {
- 	
- 	float a,b,c;
- 	
- 	int x,y,z;
- 	
- 	cout << "please enter a number for x : ";
- 	cin >> x;
- 	cout << "please enter a number for y : ";
-    cin >> y;
-    cout << "please enter a number for z : ";
-    cin >> z;
-    
-    a = (x-y) * (x+z);
-    b =((x+y+z) * (x+y+z)) + 1;
-    c = a/b;
-    cout << "answer = "<<c;
- 	
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main() {
+	float num1,num2,result;
+	char op;
+	cout << "please enter expression : ";
+	cin >> num1 >> op >> num2;
+	switch (op){
+		case '+':
+			result = num1 + num2;
+			break;
+		case '-':
+			result = num1 - num2;
+			break;
+		case '*':
+			result = num1 * num2;
+			break;
+		case '/':
+			result = num1 / num2;
+		    break;
+		case '%':
+			result = (int)num1 % (int)num2;
+	}
+	cout << "result = "<< result;
 	
 }
